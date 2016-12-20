@@ -37,7 +37,7 @@ $(LOCAL_BINARY): $(SOURCES)
 $(SWAGGER_GEN): $(SWAGGER_SPEC)
 	./scripts/generate_swagger_artifacts.sh
 	PATH="$(ROOT)/scripts:${PATH}" go generate ./copyright_gen/...
-	@echo "Generate Swagger artifacts"
+	@echo "Generated Swagger artifacts"
 
 .PHONY: unit-tests
 unit-tests:
@@ -51,7 +51,7 @@ clean:
 .PHONY: generate
 generate: $(SWAGGER_GEN) $(SOURCES)
 	PATH="$(ROOT)/scripts:${PATH}" go generate ./licenses/... ./copyright_gen/...
-	@echo "Generate licenses and copyrights"
+	@echo "Generated licenses and copyrights"
 
 .PHONY: generate build-in-docker
 build-in-docker:

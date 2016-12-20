@@ -34,7 +34,7 @@ $(LOCAL_BINARY): $(SOURCES)
 .PHONY: generate
 generate: generate-models $(SOURCES)
 	PATH="$(ROOT)/scripts:${PATH}" go generate ./licenses/... ./copyright_gen/...
-	@echo "Generate licenses and copyrights"
+	@echo "Generated licenses and copyrights"
 
 .PHONY: generate build-in-docker
 build-in-docker:
