@@ -29,11 +29,12 @@ build:	$(LOCAL_BINARY)
 
 $(LOCAL_BINARY): $(SOURCES)
 	./scripts/build_binary.sh ./out
-	@echo "Built cluster state service"
+	@echo "Built Cluster State Service"
 
 .PHONY: generate
 generate: generate-models $(SOURCES)
 	PATH="$(ROOT)/scripts:${PATH}" go generate ./licenses/... ./copyright_gen/...
+	@echo "Generate licenses and copyrights"
 
 .PHONY: generate build-in-docker
 build-in-docker:
