@@ -20,7 +20,7 @@ GOINSTALL_BINARY=$(GOPATH)/bin/daemon-scheduler
 ROOT := $(shell pwd)
 
 .PHONY: all
-all: clean build unit-tests
+all: clean generate build unit-tests
 
 .PHONY: build-incr
 build-incr: generate

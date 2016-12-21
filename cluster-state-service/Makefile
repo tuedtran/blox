@@ -17,7 +17,7 @@ LOCAL_BINARY=out/cluster-state-service
 ROOT := $(shell pwd)
 
 .PHONY: all
-all: clean build unit-tests
+all: clean generate build unit-tests
 
 .PHONY: generate-models
 generate-models:
