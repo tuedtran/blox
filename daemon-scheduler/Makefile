@@ -36,7 +36,6 @@ $(LOCAL_BINARY): $(SOURCES)
 
 $(SWAGGER_GEN): $(SWAGGER_SPEC)
 	./scripts/generate_swagger_artifacts.sh
-	PATH="$(ROOT)/scripts:${PATH}" go generate ./copyright_gen/...
 	@echo "Generated Swagger artifacts"
 
 .PHONY: unit-tests
